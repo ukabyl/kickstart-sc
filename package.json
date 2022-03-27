@@ -1,0 +1,26 @@
+{
+  "name": "kickstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ukabyl/kickstart-sc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ukabyl/kickstart-sc/issues"
+  },
+  "homepage": "https://github.com/ukabyl/kickstart-sc#readme",
+  "dependencies": {
+    "fs-extra": "^10.0.1",
+    "ganache-cli": "^6.12.2",
+    "mocha": "^9.2.2",
+    "solc": "^0.8.13",
+    "web3": "^1.7.1"
+  }
+}
