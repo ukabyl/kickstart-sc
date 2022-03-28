@@ -1,20 +1,21 @@
 import React from 'react';
+import Link from 'next/link';
 import { Header, Menu } from 'semantic-ui-react';
 
 export default () => {
     return (
         <Header style={{ marginTop: '10px' }}>
             <Menu>
-                <Menu.Item name='Crowcoin'>
-                    Crowcoin
-                </Menu.Item>
+                <Link href='/'>
+                    <a className='item'>Crowcoin</a>
+                </Link>
                 <Menu.Menu position='right'>
-                    <Menu.Item name='Campaigns'>
-                        Crowcoin
-                    </Menu.Item>
-                    <Menu.Item name='Add campaign'>
-                        +
-                    </Menu.Item>
+                    <Link href='/'>
+                        <a className='item'>Campaigns</a>
+                    </Link>
+                    <Link href='/campaigns/new'>
+                        <a className='item'>+</a>
+                    </Link>
                 </Menu.Menu>
             </Menu>
         </Header>
