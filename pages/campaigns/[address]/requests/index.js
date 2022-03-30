@@ -11,8 +11,8 @@ class Requests extends React.Component {
         const { address } = props.query;
         const campaign = Campaign(address);
         const requestsCount = await campaign.methods.getRequestsCount().call();
-        // const approversCount = await campaign.methods.approversCount().call();
-        console.log(campaign.methods)
+        const approversCount = await campaign.methods.approversCount().call();
+
         const requests = await Promise.all(
             Array(Number(requestsCount))
             .fill()
@@ -25,7 +25,7 @@ class Requests extends React.Component {
             address,
             requests,
             requestsCount,
-            approversCount,
+            approversCount: 1,
         }
     }
 
