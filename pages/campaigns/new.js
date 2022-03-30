@@ -9,11 +9,11 @@ class NewCampaign extends React.Component {
     state = {
         minimumContribution: '',
         errorMessage: '',
-        contributing: false,
+        creating: false,
     }
 
     onSubmit = async () => {
-        this.setState({ contributing: true });
+        this.setState({ creating: true });
         this.setState({ errorMessage: '' });
         try {
             const accounts = await web3.eth.getAccounts();
@@ -24,11 +24,11 @@ class NewCampaign extends React.Component {
         } catch (error) {
             this.setState({ errorMessage: error.message });
         }
-        this.setState({ contributing: false });
+        this.setState({ creating: false });
     }
 
     render() {
-        const { minimumContribution, contributing, errorMessage } = this.state;
+        const { minimumContribution, creating, errorMessage } = this.state;
 
         return (
             <Layout>
@@ -44,7 +44,7 @@ class NewCampaign extends React.Component {
                         />
                     </Form.Field>
                     <Message error header='Ooops!' content={errorMessage} />
-                    <Button type='submit' loading={contributing} primary>Create!</Button>
+                    <Button type='submit' loading={creating} primary>Create!</Button>
                 </Form>
             </Layout>
         )
