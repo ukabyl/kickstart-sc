@@ -25,7 +25,7 @@ class Requests extends React.Component {
             address,
             requests,
             requestsCount,
-            approversCount: 1,
+            approversCount,
         }
     }
 
